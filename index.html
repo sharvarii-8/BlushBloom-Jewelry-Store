@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- TODO: Paste GTM HEAD snippet here later -->
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BlushBloom Fine Jewels | Luxury Pastel Jewelry</title>
+  <style>
+    :root {
+      --bg-soft: #fff5f8;
+      --bg-card: #ffffff;
+      --gold: #c59a3d;
+      --gold-soft: #f3e3b8;
+      --ink: #3a2830;
+      --accent: #f9d3df;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: radial-gradient(circle at top, #ffe9f1 0, #fff5f8 40%, #ffffff 100%);
+      color: var(--ink);
+    }
+
+    header {
+      padding: 1.1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      backdrop-filter: blur(10px);
+      background: rgba(255, 245, 248, 0.85);
+      border-bottom: 1px solid rgba(197,154,61,0.25);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+      font-size: 1.7rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+    }
+
+    .logo span {
+      font-size: 0.7rem;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-top: 0.1rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      margin-left: 1rem;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      padding: 0.45rem 0.9rem;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      color: var(--ink);
+    }
+
+    nav a:hover {
+      border-color: var(--gold);
+      background: rgba(243,227,184,0.35);
+    }
+
+    main {
+      padding: 3rem 1.5rem 3.5rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2.4fr);
+      gap: 2.2rem;
+      align-items: center;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.3rem 0.9rem;
+      border-radius: 999px;
+      border: 1px solid rgba(197,154,61,0.45);
+      background: rgba(255, 255, 255, 0.85);
+      font-size: 0.75rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 0.9rem;
+    }
+
+    .hero-badge-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--gold);
+    }
+
+    .hero-title {
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 2.5rem;
+      line-height: 1.2;
+      margin-bottom: 0.7rem;
+    }
+
+    .hero-subtitle {
+      font-size: 0.98rem;
+      opacity: 0.9;
+      margin-bottom: 1.5rem;
+      max-width: 460px;
+    }
+
+    .hero-cta {
+      display: flex;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      border-radius: 999px;
+      border: none;
+      padding: 0.8rem 1.6rem;
+      font-size: 0.9rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--gold), #f3c06b);
+      color: #fffaf0;
+      box-shadow: 0 6px 18px rgba(197,154,61,0.5);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 9px 24px rgba(197,154,61,0.6);
+    }
+
+    .btn-outline {
+      background: rgba(255,255,255,0.95);
+      border: 1px solid rgba(197,154,61,0.5);
+      color: var(--ink);
+    }
+
+    .btn-outline:hover {
+      background: var(--accent);
+    }
+
+    .hero-card {
+      background: linear-gradient(145deg, #fffdf7, #ffe9f3);
+      border-radius: 26px;
+      padding: 1.8rem 1.6rem;
+      box-shadow: 0 14px 32px rgba(0,0,0,0.08);
+      border: 1px solid rgba(197,154,61,0.35);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-orbit {
+      width: 210px;
+      height: 210px;
+      border-radius: 50%;
+      margin: 0 auto 1.1rem;
+      border: 10px double rgba(197,154,61,0.7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "Playfair Display", Georgia, serif;
+      text-align: center;
+      padding: 1.4rem;
+      font-size: 1.1rem;
+    }
+
+    .hero-chip {
+      font-size: 0.8rem;
+      text-align: center;
+      opacity: 0.9;
+    }
+
+    .sparkle {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 1px solid rgba(197,154,61,0.5);
+      background: radial-gradient(circle, rgba(255,255,255,0.9), rgba(243,227,184,0.5));
+      top: 1.2rem;
+      right: 1.4rem;
+      opacity: 0.8;
+    }
+
+    .section {
+      margin-top: 3.4rem;
+    }
+
+    .section h2 {
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 1.6rem;
+      text-align: center;
+      margin-bottom: 0.4rem;
+    }
+
+    .section p {
+      text-align: center;
+      font-size: 0.95rem;
+      opacity: 0.9;
+      max-width: 640px;
+      margin: 0 auto 1.6rem;
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.7rem;
+    }
+
+    .pill {
+      padding: 0.45rem 0.9rem;
+      border-radius: 999px;
+      border: 1px solid rgba(197,154,61,0.4);
+      font-size: 0.8rem;
+      background: rgba(255,255,255,0.96);
+    }
+
+    footer {
+      background: #fffaf2;
+      border-top: 1px solid rgba(197,154,61,0.3);
+      text-align: center;
+      padding: 1.2rem 1.5rem;
+      font-size: 0.85rem;
+      color: rgba(58,40,48,0.9);
+    }
+
+    @media (max-width: 800px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+      header {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- TODO: Paste GTM BODY snippet (noscript) here later -->
+
+  <header>
+    <div class="logo">
+      BlushBloom
+      <span>FINE JEWELS</span>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="products.html">Collection</a>
+      <a href="payments.html">Checkout</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <div class="hero-badge">
+          <span class="hero-badge-dot"></span>
+          CURATED GOLD • PASTEL STONES
+        </div>
+        <h1 class="hero-title">
+          Soft pastel jewels with a touch of champagne gold luxury.
+        </h1>
+        <p class="hero-subtitle">
+          BlushBloom Fine Jewels brings you dainty, gold-toned pieces with 
+          pastel accents—perfect for dates, festivities, and quiet self-love days.
+        </p>
+        <div class="hero-cta">
+          <button class="btn btn-primary" onclick="location.href='products.html'">
+            View Collection
+          </button>
+          <button class="btn btn-outline" onclick="location.href='payments.html'">
+            Quick Checkout (Demo)
+          </button>
+        </div>
+      </div>
+
+      <aside class="hero-card">
+        <div class="sparkle"></div>
+        <div class="hero-orbit">
+          Jewels that feel like
+          morning light on soft pink silk.
+        </div>
+        <div class="hero-chip">
+          Complimentary pastel gift box on all demo orders.
+        </div>
+      </aside>
+    </section>
+
+    <section class="section">
+      <h2>Designed for your soft, golden era.</h2>
+      <p>
+        Every piece is selected to balance elegance with playfulness—gold accents,
+        pastel stones, and subtle sparkle that looks good in real life and in selfies.
+      </p>
+      <div class="pill-row">
+        <span class="pill">Hypoallergenic plating</span>
+        <span class="pill">Pastel gemstone accents</span>
+        <span class="pill">Soft glam, not too loud</span>
+        <span class="pill">Perfect for gifting</span>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> BlushBloom Fine Jewels · Demo storefront for practice.
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
