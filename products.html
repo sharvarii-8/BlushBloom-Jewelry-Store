@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- TODO: Paste GTM HEAD snippet here later -->
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BlushBloom Fine Jewels | Collection</title>
+  <style>
+    :root {
+      --bg-soft: #fff5f8;
+      --bg-card: #ffffff;
+      --gold: #c59a3d;
+      --ink: #3a2830;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg-soft);
+      color: var(--ink);
+    }
+
+    header {
+      padding: 1.1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(255,245,248,0.95);
+      border-bottom: 1px solid rgba(197,154,61,0.25);
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 1.7rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+    }
+
+    .logo span {
+      font-size: 0.7rem;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-top: 0.1rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      margin-left: 1rem;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      padding: 0.45rem 0.9rem;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      color: var(--ink);
+    }
+
+    nav a:hover {
+      border-color: var(--gold);
+      background: rgba(243,227,184,0.35);
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 3.2rem;
+    }
+
+    h1 {
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 0.4rem;
+    }
+
+    .subtitle {
+      text-align: center;
+      font-size: 0.95rem;
+      opacity: 0.9;
+      margin-bottom: 2rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.6rem;
+    }
+
+    .card {
+      background: var(--bg-card);
+      border-radius: 20px;
+      padding: 1.3rem 1.1rem;
+      border: 1px solid rgba(197,154,61,0.3);
+      box-shadow: 0 10px 24px rgba(0,0,0,0.06);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 230px;
+    }
+
+    .tag {
+      font-size: 0.75rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      opacity: 0.7;
+      margin-bottom: 0.3rem;
+    }
+
+    .name {
+      font-weight: 600;
+      margin-bottom: 0.2rem;
+    }
+
+    .desc {
+      font-size: 0.87rem;
+      opacity: 0.9;
+      margin-bottom: 0.6rem;
+    }
+
+    .price {
+      font-weight: 600;
+      margin-bottom: 0.7rem;
+    }
+
+    .btn {
+      border-radius: 999px;
+      border: none;
+      padding: 0.6rem 1.2rem;
+      font-size: 0.85rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      cursor: pointer;
+      align-self: flex-start;
+      background: linear-gradient(135deg, var(--gold), #f3c06b);
+      color: #fffaf0;
+      box-shadow: 0 4px 12px rgba(197,154,61,0.45);
+      transition: transform 0.12s ease, box-shadow 0.12s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 7px 18px rgba(197,154,61,0.55);
+    }
+
+    .back {
+      margin-top: 2.1rem;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    .back a {
+      color: var(--ink);
+      text-decoration: underline;
+    }
+
+    @media (max-width: 720px) {
+      header {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- TODO: Paste GTM BODY snippet (noscript) here later -->
+
+  <header>
+    <div class="logo">
+      BlushBloom
+      <span>FINE JEWELS</span>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="products.html">Collection</a>
+      <a href="payments.html">Checkout</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Pastel & Gold Collection</h1>
+    <p class="subtitle">
+      Curated pieces with warm gold tones and soft blush, champagne and nude-pink stones.
+    </p>
+
+    <section class="grid">
+      <article class="card">
+        <div>
+          <div class="tag">Necklace</div>
+          <div class="name">Champagne Dawn Pendant</div>
+          <div class="desc">
+            Fine chain with a single oval champagne stone framed in soft gold.
+          </div>
+          <div class="price">₹1,899</div>
+        </div>
+        <button class="btn" onclick="location.href='payments.html'">Add to Cart</button>
+      </article>
+
+      <article class="card">
+        <div>
+          <div class="tag">Bracelet</div>
+          <div class="name">Blush Mist Tennis Bracelet</div>
+          <div class="desc">
+            Dainty line bracelet studded with alternating nude-pink and clear stones.
+          </div>
+          <div class="price">₹1,699</div>
+        </div>
+        <button class="btn" onclick="location.href='payments.html'">Add to Cart</button>
+      </article>
+
+      <article class="card">
+        <div>
+          <div class="tag">Rings</div>
+          <div class="name">Soft Glow Ring Stack</div>
+          <div class="desc">
+            Set of three slim gold bands with tiny pastel stones for stacking.
+          </div>
+          <div class="price">₹1,299</div>
+        </div>
+        <button class="btn" onclick="location.href='payments.html'">Add to Cart</button>
+      </article>
+
+      <article class="card">
+        <div>
+          <div class="tag">Earrings</div>
+          <div class="name">Rosé Halo Studs</div>
+          <div class="desc">
+            Round blush center stone surrounded by a halo of micro crystals.
+          </div>
+          <div class="price">₹1,499</div>
+        </div>
+        <button class="btn" onclick="location.href='payments.html'">Add to Cart</button>
+      </article>
+    </section>
+
+    <div class="back">
+      or <a href="index.html">go back to the home page</a>
+    </div>
+  </main>
+</body>
+</html>
