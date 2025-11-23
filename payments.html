@@ -99,3 +99,205 @@
       border: 1px solid rgba(197,154,61,0.35);
       box-shadow: 0 12px 26px rgba(0,0,0,0.07);
     }
+
+    label {
+      display: block;
+      font-size: 0.84rem;
+      margin-bottom: 0.25rem;
+      font-weight: 500;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 0.6rem 0.65rem;
+      margin-bottom: 0.85rem;
+      border-radius: 10px;
+      border: 1px solid rgba(197,154,61,0.45);
+      font-family: inherit;
+      font-size: 0.9rem;
+      background: #fffdf9;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.9rem;
+    }
+
+    .btn {
+      width: 100%;
+      border-radius: 999px;
+      border: none;
+      padding: 0.85rem 1.4rem;
+      font-size: 0.95rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      cursor: pointer;
+      background: linear-gradient(135deg, var(--gold), #f3c06b);
+      color: #fffaf0;
+      box-shadow: 0 6px 18px rgba(197,154,61,0.55);
+      margin-top: 0.4rem;
+      transition: transform 0.12s ease, box-shadow 0.12s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 9px 24px rgba(197,154,61,0.65);
+    }
+
+    .summary {
+      background: var(--bg-card);
+      border-radius: 20px;
+      padding: 1.5rem 1.4rem;
+      border: 1px solid rgba(197,154,61,0.35);
+      box-shadow: 0 12px 26px rgba(0,0,0,0.06);
+      font-size: 0.9rem;
+      height: fit-content;
+    }
+
+    .summary-title {
+      font-weight: 600;
+      margin-bottom: 0.7rem;
+    }
+
+    .row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0.35rem;
+    }
+
+    .row.total {
+      margin-top: 0.6rem;
+      font-weight: 600;
+    }
+
+    .note {
+      font-size: 0.8rem;
+      opacity: 0.8;
+      margin-top: 0.9rem;
+    }
+
+    .back {
+      grid-column: 1 / -1;
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+    }
+
+    .back a {
+      color: var(--ink);
+      text-decoration: underline;
+    }
+
+    @media (max-width: 880px) {
+      main {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 720px) {
+      header {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- TODO: Paste GTM BODY snippet (noscript) here later -->
+
+  <header>
+    <div class="logo">
+      BlushBloom
+      <span>FINE JEWELS</span>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="products.html">Collection</a>
+      <a href="payments.html">Checkout</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h1>Secure Checkout</h1>
+      <p class="subtitle">
+        This is a demo checkout page, perfect for testing GA4, GTM, and conversion tracking.
+      </p>
+
+      <form action="thankyou.html" method="GET">
+        <label for="name">Full Name</label>
+        <input id="name" name="name" type="text" placeholder="e.g. Ananya Rao" required>
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" placeholder="you@example.com" required>
+
+        <label for="address">Shipping Address</label>
+        <input id="address" name="address" type="text" placeholder="Flat / Street / Area" required>
+
+        <div class="two-col">
+          <div>
+            <label for="city">City</label>
+            <input id="city" name="city" type="text" placeholder="e.g. Hyderabad" required>
+          </div>
+          <div>
+            <label for="pin">PIN Code</label>
+            <input id="pin" name="pin" type="text" placeholder="e.g. 500001" required>
+          </div>
+        </div>
+
+        <label for="payment">Payment Method</label>
+        <select id="payment" name="payment" required>
+          <option value="">Select payment method</option>
+          <option>UPI</option>
+          <option>Credit Card</option>
+          <option>Debit Card</option>
+          <option>Cash on Delivery</option>
+        </select>
+
+        <div class="two-col">
+          <div>
+            <label for="card">Card / UPI ID (demo)</label>
+            <input id="card" name="card" type="text" placeholder="XXXX-XXXX / your@upi">
+          </div>
+          <div>
+            <label for="phone">Phone</label>
+            <input id="phone" name="phone" type="text" placeholder="+91-XXXXXXXXXX">
+          </div>
+        </div>
+
+        <button class="btn" type="submit">
+          Place Order (Demo)
+        </button>
+      </form>
+    </section>
+
+    <aside class="summary">
+      <div class="summary-title">Order Summary (Demo)</div>
+      <div class="row">
+        <span>Selected item</span>
+        <span>BlushBloom jewelry</span>
+      </div>
+      <div class="row">
+        <span>Subtotal</span>
+        <span>₹1,899</span>
+      </div>
+      <div class="row">
+        <span>Shipping</span>
+        <span>₹0</span>
+      </div>
+      <div class="row total">
+        <span>Total</span>
+        <span>₹1,899</span>
+      </div>
+      <p class="note">
+        This page is primarily for testing events, conversions and cross-domain cookies.
+      </p>
+    </aside>
+
+    <div class="back">
+      or <a href="products.html">go back to the collection</a>
+    </div>
+  </main>
+</body>
+</html>
